@@ -1,0 +1,48 @@
+_target_: trl.SFTConfig
+
+output_dir: "gemma-es-comms"
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+gradient_accumulation_steps: 1
+num_train_epochs: 1
+max_steps: -1
+
+# Optimization
+learning_rate: 2e-5
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-8
+max_grad_norm: 1.0
+lr_scheduler_type: "linear"
+warmup_ratio: 0.0
+
+# Dataset Processing
+dataset_text_field: "text"
+max_seq_length: 128
+packing: false
+padding_free: false
+dataset_num_proc: 4
+
+# Logging & Saving
+logging_steps: 50
+logging_strategy: "steps"
+save_strategy: "steps"
+save_steps: 500
+save_total_limit: 2
+report_to: "wandb"
+
+# Mixed Precision
+fp16: true
+bf16: false
+fp16_opt_level: "O1"
+
+# System
+seed: 42
+dataloader_num_workers: 4
+dataloader_pin_memory: true
+disable_tqdm: false
+
+# SFT-specific
+model_init_kwargs: null
+completion_only_loss: true

@@ -1,0 +1,7 @@
+_target_: peft.LoraConfig
+r : 16
+lora_alpha : 32
+lora_dropout : 0.05
+target_modules : "all-linear"
+modules_to_save : ["lm_head", "embed_token"]
+task_type : "CAUSAL_LM"

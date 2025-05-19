@@ -1,0 +1,11 @@
+defaults:
+  - model : mT5
+  - tokenizer : mT5
+  - peft : lora
+  - training_args: seq2seq
+  - trainer : seq2seq
+  
+seed: 42
+device: '0'
+dataset_path : "textdetox/es_paradetox"
+use_adapter : False

@@ -1,0 +1,2 @@
+_target_ : transformers.MT5Tokenizer.from_pretrained
+pretrained_model_name_or_path : 'google/mt5-base'
