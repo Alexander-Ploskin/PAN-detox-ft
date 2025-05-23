@@ -1,0 +1,3 @@
+ds_path: textdetox/multilingual_paradetox_test
+model_ckpt: gemma-filtered-83-paradetox/checkpoint-405
+submit_file: submits/filter-83.tsv

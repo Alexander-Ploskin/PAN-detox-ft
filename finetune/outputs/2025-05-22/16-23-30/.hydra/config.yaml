@@ -1,0 +1,58 @@
+model:
+  _target_: transformers.Gemma3ForCausalLM.from_pretrained
+  pretrained_model_name_or_path: google/gemma-3-1b-it
+tokenizer:
+  _target_: transformers.AutoTokenizer.from_pretrained
+  pretrained_model_name_or_path: google/gemma-3-1b-it
+peft:
+  _target_: peft.LoraConfig
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  modules_to_save:
+  - lm_head
+  - embed_token
+  target_modules: all-linear
+  task_type: CAUSAL_LM
+training_args:
+  _target_: trl.SFTConfig
+  output_dir: gemma-filtered-88-paradetox
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 1
+  num_train_epochs: 1
+  max_steps: -1
+  learning_rate: 2.0e-05
+  weight_decay: 0.0
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-08
+  max_grad_norm: 1.0
+  lr_scheduler_type: linear
+  warmup_ratio: 0.0
+  dataset_text_field: text
+  max_seq_length: 128
+  packing: false
+  padding_free: false
+  dataset_num_proc: 4
+  logging_steps: 50
+  logging_strategy: steps
+  save_strategy: steps
+  save_steps: 500
+  save_total_limit: 2
+  report_to: wandb
+  fp16: true
+  bf16: false
+  fp16_opt_level: O1
+  seed: 42
+  dataloader_num_workers: 4
+  dataloader_pin_memory: true
+  disable_tqdm: false
+  model_init_kwargs: null
+  completion_only_loss: true
+trainer:
+  _target_: trl.SFTTrainer
+seed: 42
+device: 2
+ds_list: 88.csv
+use_adapter: false

@@ -1,0 +1,7 @@
+- device=1
+- model=gemma
+- tokenizer=gemma
+- trainer=sft
+- training_args=sft
+- training_args.output_dir=gemma-all-data-lora
+- use_adapter=true

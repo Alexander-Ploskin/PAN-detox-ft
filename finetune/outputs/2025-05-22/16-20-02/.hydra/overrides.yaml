@@ -1,0 +1,7 @@
+- device=2
+- model=gemma
+- tokenizer=gemma
+- trainer=sft
+- training_args=sft
+- training_args.output_dir=gemma-filtered-83-paradetox
+- ds_list=83.csv

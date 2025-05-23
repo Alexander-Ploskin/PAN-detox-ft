@@ -7,5 +7,5 @@ defaults:
   
 seed: 42
 device: '0'
-dataset_path : "textdetox/es_paradetox"
+ds_list : ['textdetox/multilingual_paradetox', 's-nlp/paradetox', 's-nlp/ru_paradetox', 'textdetox/uk_paradetox', 'textdetox/es_paradetox', 'data/mt0_detox_full_data', 'data/nikita_sushko']
 use_adapter : False

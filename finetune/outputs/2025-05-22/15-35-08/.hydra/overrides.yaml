@@ -1,0 +1,6 @@
+- device=0
+- model=gemma
+- tokenizer=gemma
+- trainer=sft
+- training_args=sft
+- training_args.output_dir=gemma-all-data

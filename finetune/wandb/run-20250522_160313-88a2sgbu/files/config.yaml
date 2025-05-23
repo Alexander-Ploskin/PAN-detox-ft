@@ -1,0 +1,110 @@
+_wandb:
+    value:
+        cli_version: 0.19.11
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 50
+                - 51
+                - 55
+                - 71
+                - 84
+                - 98
+            "2":
+                - 1
+                - 11
+                - 49
+                - 50
+                - 51
+                - 55
+                - 71
+                - 84
+                - 98
+            "3":
+                - 23
+                - 55
+            "4": 3.10.12
+            "5": 0.19.11
+            "6": 4.51.3
+            "8":
+                - 5
+            "12": 0.19.11
+            "13": linux-x86_64
+device:
+    value: 1
+ds_list:
+    value:
+        - textdetox/multilingual_paradetox
+        - s-nlp/paradetox
+        - s-nlp/ru_paradetox
+        - textdetox/uk_paradetox
+        - textdetox/es_paradetox
+        - data/mt0_detox_full_data
+        - data/nikita_sushko
+model:
+    value:
+        _target_: transformers.Gemma3ForCausalLM.from_pretrained
+        pretrained_model_name_or_path: google/gemma-3-1b-it
+peft:
+    value:
+        _target_: peft.LoraConfig
+        lora_alpha: 32
+        lora_dropout: 0.05
+        modules_to_save:
+            - lm_head
+            - embed_token
+        r: 16
+        target_modules: all-linear
+        task_type: CAUSAL_LM
+seed:
+    value: 42
+tokenizer:
+    value:
+        _target_: transformers.AutoTokenizer.from_pretrained
+        pretrained_model_name_or_path: google/gemma-3-1b-it
+trainer:
+    value:
+        _target_: trl.SFTTrainer
+training_args:
+    value:
+        _target_: trl.SFTConfig
+        adam_beta1: 0.9
+        adam_beta2: 0.999
+        adam_epsilon: 1e-08
+        bf16: false
+        completion_only_loss: true
+        dataloader_num_workers: 4
+        dataloader_pin_memory: true
+        dataset_num_proc: 4
+        dataset_text_field: text
+        disable_tqdm: false
+        fp16: true
+        fp16_opt_level: O1
+        gradient_accumulation_steps: 1
+        learning_rate: 2e-05
+        logging_steps: 50
+        logging_strategy: steps
+        lr_scheduler_type: linear
+        max_grad_norm: 1
+        max_seq_length: 128
+        max_steps: -1
+        model_init_kwargs: null
+        num_train_epochs: 1
+        output_dir: gemma-all-data-lora
+        packing: false
+        padding_free: false
+        per_device_eval_batch_size: 8
+        per_device_train_batch_size: 8
+        report_to: wandb
+        save_steps: 500
+        save_strategy: steps
+        save_total_limit: 2
+        seed: 42
+        warmup_ratio: 0
+        weight_decay: 0
+use_adapter:
+    value: true

@@ -1,0 +1,3 @@
+ds_path: textdetox/multilingual_paradetox_test
+model_ckpt: gemma-all-data/checkpoint-15500
+submit_file: submits/gemma_all_data.tsv

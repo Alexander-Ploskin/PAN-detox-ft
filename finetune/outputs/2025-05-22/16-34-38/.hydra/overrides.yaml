@@ -1,0 +1,2 @@
+- model_ckpt=gemma-filtered-83-paradetox
+- submit_file=submits/filter-83.tsv

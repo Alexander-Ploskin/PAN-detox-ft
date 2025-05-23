@@ -1,0 +1,2 @@
+- model_ckpt=gemma-all-data-lora/checkpoint-15500
+- submit_file=submits/gemma_all_data_lora.tsv

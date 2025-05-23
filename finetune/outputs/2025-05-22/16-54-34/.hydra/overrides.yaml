@@ -1,0 +1,2 @@
+- model_ckpt=gemma-filtered-88-paradetox/checkpoint-360
+- submit_file=submits/filter-88.tsv
