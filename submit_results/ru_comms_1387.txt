@@ -1,0 +1,28 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2025-05-18 08:10:17,445 - INFO - Input directory: /tmp/codalab/tmpj3mGfr/run/input
+2025-05-18 08:10:17,445 - INFO - Output directory: /tmp/codalab/tmpj3mGfr/run/output
+2025-05-18 08:10:17,478 - INFO - References file: 9000
+2025-05-18 08:10:17,511 - INFO - Predictions file: 9000
+2025-05-18 08:10:17,520 - INFO - Sending predictions to remove evaluation server
+2025-05-18 08:10:17,536 - DEBUG - Starting new HTTP connection (1): 94.139.255.29:31337
+2025-05-18 08:13:31,306 - DEBUG - http://94.139.255.29:31337 "POST /evaluate HTTP/1.1" 200 2747
+2025-05-18 08:13:31,317 - INFO - Recieved results
+2025-05-18 08:13:31,319 - INFO - Metrics for the language am: STA 0.750 SIM 0.558 CHRF 0.222 J 0.230 XCOMET 0.517
+2025-05-18 08:13:31,319 - INFO - Metrics for the language ar: STA 0.913 SIM 0.536 CHRF 0.124 J 0.296 XCOMET 0.564
+2025-05-18 08:13:31,319 - INFO - Metrics for the language de: STA 0.782 SIM 0.812 CHRF 0.473 J 0.513 XCOMET 0.813
+2025-05-18 08:13:31,319 - INFO - Metrics for the language en: STA 0.783 SIM 0.851 CHRF 0.661 J 0.587 XCOMET 0.870
+2025-05-18 08:13:31,319 - INFO - Metrics for the language es: STA 0.858 SIM 0.718 CHRF 0.310 J 0.453 XCOMET 0.721
+2025-05-18 08:13:31,319 - INFO - Metrics for the language fr: STA 0.880 SIM 0.750 CHRF 0.294 J 0.478 XCOMET 0.712
+2025-05-18 08:13:31,319 - INFO - Metrics for the language he: STA 0.781 SIM 0.591 CHRF 0.136 J 0.281 XCOMET 0.581
+2025-05-18 08:13:31,319 - INFO - Metrics for the language hi: STA 0.879 SIM 0.618 CHRF 0.135 J 0.316 XCOMET 0.561
+2025-05-18 08:13:31,319 - INFO - Metrics for the language hin: STA 0.655 SIM 0.710 CHRF 0.479 J 0.302 XCOMET 0.656
+2025-05-18 08:13:31,319 - INFO - Metrics for the language it: STA 0.880 SIM 0.816 CHRF 0.529 J 0.571 XCOMET 0.773
+2025-05-18 08:13:31,319 - INFO - Metrics for the language ja: STA 0.813 SIM 0.724 CHRF 0.386 J 0.389 XCOMET 0.664
+2025-05-18 08:13:31,319 - INFO - Metrics for the language ru: STA 0.901 SIM 0.860 CHRF 0.715 J 0.687 XCOMET 0.877
+2025-05-18 08:13:31,319 - INFO - Metrics for the language tt: STA 0.674 SIM 0.749 CHRF 0.602 J 0.390 XCOMET 0.739
+2025-05-18 08:13:31,319 - INFO - Metrics for the language uk: STA 0.914 SIM 0.842 CHRF 0.532 J 0.658 XCOMET 0.845
+2025-05-18 08:13:31,319 - INFO - Metrics for the language zh: STA 0.729 SIM 0.731 CHRF 0.288 J 0.394 XCOMET 0.758
+2025-05-18 08:13:31,321 - INFO - Average all J: 0.436
+2025-05-18 08:13:31,321 - INFO - Average_p J: 0.459
+2025-05-18 08:13:31,321 - INFO - Average_np J: 0.402
+2025-05-18 08:13:31,321 - INFO - Average XCOMET: 0.710
